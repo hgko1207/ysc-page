@@ -15,4 +15,12 @@ public class HomeController {
 	@GetMapping("home")
     public void home(Model model) {
     }
+	
+	/**
+	 * 로그인 화면
+	 * @param model
+	 */
+	@GetMapping("login")
+    public void login(Model model) {
+    }
 }
