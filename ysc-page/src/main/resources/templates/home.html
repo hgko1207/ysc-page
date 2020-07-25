@@ -3,27 +3,40 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/default_layout">
       
 <th:block layout:fragment="content">
-	<section id="content">
-		<div class="content-wrap">
-			<div class="section header-stick">
-				<div class="container clearfix">
-					<div class="row">
-						<div class="col-lg-9">
-							<div class="heading-block bottommargin-sm">
-								<h3>We specialize in Robust Software Solutions</h3>
+	<section id="slider" class="slider-element min-vh-60 min-vh-md-100 with-header swiper_wrapper page-section">
+		<div class="slider-inner">
+			<div class="swiper-container swiper-parent">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide dark">
+						<div class="container">
+							<div class="slider-caption slider-caption-center">
+								<h2 data-animate="fadeInUp">환영합니다.</h2>
+								<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">
+									진정한 교육문화 기업을 목표로 함께하는 우리 선생님들과 꼭 이루겠습니다.
+								</p>
 							</div>
-
-							<p class="mb-0">Lasting change, stakeholders development Angelina Jolie world problem solving progressive. Courageous; social entrepreneurship change; accelerate resolve pursue these aspirations asylum.</p>
 						</div>
-
-						<div class="col-lg-3">
-							<a href="#" class="button button-3d button-dark button-large btn-block center" style="margin-top: 30px;">Check our Services</a>
+						<div class="swiper-slide-bg" style="background-image: url('images/slider/1.jpg');"></div>
+					</div>
+					<div class="swiper-slide">
+						<div class="container">
+							<div class="slider-caption">
+								<h2 data-animate="fadeInUp">Great Performance</h2>
+								<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
+							</div>
 						</div>
-
+						<div class="swiper-slide-bg" style="background-image: url('images/slider/2.jpg'); background-position: center top;"></div>
 					</div>
 				</div>
+				<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+				<div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+				<div class="slide-number"><div class="slide-number-current"></div><span>/</span><div class="slide-number-total"></div></div>
 			</div>
 		</div>
+	</section>
+		
+	<section id="content">
+		
 	</section>
 </th:block>
 </html>
