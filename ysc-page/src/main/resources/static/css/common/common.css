@@ -1,1 +1,62 @@
 @charset "EUC-KR";
+
+/*----------------------------------------------------------------
+	Header
+-----------------------------------------------------------------*/
+.menu-link {
+	font-size: 0.95rem;	
+}
+
+.login-btn {
+	padding: 5px 22px;
+}
+
+/*----------------------------------------------------------------
+	Content
+-----------------------------------------------------------------*/
+@media ( min-width : 768px) {
+	.min-vh-md-100 {
+		min-height: 60vh !important;
+	}
+}
+
+.page-menu-title, .page-menu-item>a {
+	font-weight: 600;
+}
+
+#page-title {
+	padding: 3rem 0;
+}
+
+.content-wrap {
+	padding: 0;
+}
+
+.section {
+	margin: 0;
+}
+
+/*----------------------------------------------------------------
+	Footer
+-----------------------------------------------------------------*/
+.copyrights, .copyrights a {
+	font-size: 0.875rem;
+	color: rgba(255, 255, 255, 0.4) !important;
+}
+
+@media ( max-width : 768px) {
+	.copyrights, .copyrights a {
+		font-size: 10px!important;
+	}
+	.footer-tel a {
+		font-size: 12px!important;
+	}
+}
+
+#footer .footer-widgets-wrap {
+	padding: 20px 0;
+}
+
+.footer-tel a {
+	font-size: 20px;
+}

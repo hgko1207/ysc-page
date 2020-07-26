@@ -1,6 +1,24 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <!-- headerFragment 사용 -->
 <th:block th:fragment="headerFragment">
+	<!-- <div id="top-bar" class="dark" style="background-color: #a3a5a7;">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-12 col-lg-auto">
+					<p class="mb-0 py-2 text-center text-md-left"><strong>Call:</strong> 1800-547-2145 | <strong>Email:</strong> info@canvas.com</p>
+				</div>
+
+				<div class="col-12 col-lg-auto d-none d-lg-flex">
+					<div class="top-links">
+						<ul class="top-links-container">
+							<li class="top-links-item"><a href="#">About</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+		
 	<header id="header" class="header-size-md" data-sticky-shrink="false">
 		<div id="header-wrap">
 			<div class="container">
@@ -9,6 +27,10 @@
 						<a th:href="@{/home}" class="standard-logo">
 							<img th:src="@{/images/logo.png}" alt="Canvas Logo">
 						</a>
+					</div>
+					
+					<div class="header-misc">
+						<a href="#loginModal" class="button button-border button-border-thin button-blue login-btn" data-lightbox="inline">로그인</a>
 					</div>
 					
 					<div id="primary-menu-trigger">
@@ -21,12 +43,12 @@
 					
 					<nav class="primary-menu">
 						<ul class="menu-container">
-							<li class="menu-item current">
+							<li id="home" class="menu-item">
 								<a class="menu-link" th:href="@{/home}">HOME</a>
 							</li>
-							<li class="menu-item">
-								<a class="menu-link" href="#">궁금해요</a>
-								<ul class="sub-menu-container">
+							<li id="about" class="menu-item">
+								<a class="menu-link" th:href="@{/about/accomplish}">궁금해요</a>
+								<!-- <ul class="sub-menu-container">
 									<li class="menu-item">
 										<a class="menu-link" th:href="@{/about/accomplish}">Firmly accomplish</a>
 									</li>
@@ -39,12 +61,12 @@
 									<li class="menu-item">
 										<a class="menu-link" th:href="@{/about/location}">Location YSC</a>
 									</li>
-								</ul>
+								</ul> -->
 							</li>
-							<li class="menu-item">
-								<a class="menu-link" href="#">알립니다</a>
+							<li id="notice" class="menu-item">
+								<a class="menu-link" th:href="@{/notice/main}">알립니다</a>
 							</li>
-							<li class="menu-item">
+							<li id="board" class="menu-item">
 								<a class="menu-link" href="#">함께해요</a>
 								<ul class="sub-menu-container">
 									<li class="menu-item">
@@ -61,14 +83,55 @@
 									</li>
 								</ul>
 							</li>
-							<li class="menu-item">
+							<!-- <li class="menu-item">
 								<a class="menu-link" th:href="@{/login}">시작해요</a>
-							</li>
+								<a href="#loginModal" class="menu-link" data-lightbox="inline">
+									시작해요
+								</a>
+							</li> -->
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 	</header>
+	
+	<!-- Login Modal -->
+	<div class="modal1 mfp-hide" id="loginModal">
+		<div class="card mx-auto" style="max-width: 540px;">
+			<div class="card-header py-3 bg-transparent center">
+				<h3 class="mb-0 font-weight-normal">Hello, Welcome Back</h3>
+			</div>
+			<div class="card-body mx-auto py-5" style="max-width: 70%;">
+				<form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
+					<div class="col-12">
+						<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username" />
+					</div>
+
+					<div class="col-12 mt-4">
+						<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" placeholder="Password" />
+					</div>
+
+					<div class="col-12">
+						<a href="#" class="float-right text-dark font-weight-light mt-2">Forgot Password?</a>
+					</div>
+
+					<div class="col-12 mt-4">
+						<button class="button btn-block m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer py-4 center">
+				<p class="mb-0">Don't have an account? <a href="#">Sign up</a></p>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var pathName = this.location.pathname;
+		var menuName = pathName.split("/")[2];
+	    
+		$("li#" + menuName).addClass("current");
+	</script>
 </th:block>
 </html>
