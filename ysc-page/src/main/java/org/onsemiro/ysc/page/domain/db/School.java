@@ -33,12 +33,6 @@ public class School implements Domain {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@CreationTimestamp
-	private LocalDateTime createDate;
-	
-	@UpdateTimestamp
-	private LocalDateTime updateDate;
-	
 	/** 이름 */
 	@Column(nullable = false, length = 20)
 	private String name;
@@ -52,6 +46,12 @@ public class School implements Domain {
 	
 	@Column(length = 45)
 	private String city;
+	
+	@CreationTimestamp
+	private LocalDateTime createDate;
+	
+	@UpdateTimestamp
+	private LocalDateTime updateDate;
 	
 	@Getter
 	public enum SchoolType {

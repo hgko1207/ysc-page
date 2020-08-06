@@ -39,12 +39,6 @@ public class Notice implements Domain {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@CreationTimestamp
-	private LocalDateTime createDate;
-	
-	@UpdateTimestamp
-	private LocalDateTime updateDate;
-	
 	@NotNull
 	private String title;
 	
@@ -63,4 +57,10 @@ public class Notice implements Domain {
 	@OneToMany(mappedBy = "notice", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@Fetch(FetchMode.SUBSELECT)
 	private List<UploadedFile> uploadedFiles;
+	
+	@CreationTimestamp
+	private LocalDateTime createDate;
+	
+	@UpdateTimestamp
+	private LocalDateTime updateDate;
 }
