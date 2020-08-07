@@ -3,23 +3,29 @@
 <!-- configFragment 선언 -->
 <th:block th:fragment="configFragment">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!-- <link rel="shortcut icon" th:href="@{/images/favicon.ico}"> -->
 	<title>YSC평생교육원</title>
 	
-	<link id="contextPathHolder" th:data-contextPath="${#httpServletRequest.getContextPath()}"/>
+	<!-- <link id="contextPathHolder" th:data-contextPath="${#httpServletRequest.getContextPath()}"/> -->
 	
 	<!--  Stylesheets -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
-	<link th:href="@{/canvas/css/bootstrap.css}" rel="stylesheet"/>
-	<link th:href="@{/canvas/css/style.css}" rel="stylesheet"/>
-	<link th:href="@{/canvas/css/swiper.css}" rel="stylesheet"/>
-	<link th:href="@{/canvas/css/dark.css}" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" th:href="@{/canvas/css/bootstrap.css}" type="text/css"/>
+	<link rel="stylesheet" th:href="@{/canvas/css/style.css}" type="text/css"/>
 	
-	<link th:href="@{/canvas/css/font-icons.css}" rel="stylesheet"/>
-	<link th:href="@{/canvas/css/animate.css}" rel="stylesheet"/>
-	<link th:href="@{/canvas/css/magnific-popup.css}" rel="stylesheet"/>
+	<!-- <link th:href="@{/canvas/css/swiper.css}" rel="stylesheet"/> -->
+	<link rel="stylesheet" th:href="@{/canvas/css/dark.css}" type="text/css"/>
+	<link rel="stylesheet" th:href="@{/canvas/css/font-icons.css}" type="text/css"/>
+	<link rel="stylesheet" th:href="@{/canvas/css/animate.css}" type="text/css"/>
+	<link rel="stylesheet" th:href="@{/canvas/css/magnific-popup.css}" type="text/css"/>
+	<meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
 	<!-- / Stylesheets -->
+	
+	<!-- Seo Demo Specific Stylesheet -->
+	<link rel="stylesheet" th:href="@{/canvas/css/colors.php?color=FE9603}" type="text/css"/>
+	<link rel="stylesheet" th:href="@{/canvas/demos/seo/css/fonts.css}" type="text/css"/>
+	<link rel="stylesheet" th:href="@{/canvas/demos/seo/seo.css}" type="text/css"/>
+	<!-- / -->
 		
 	<!-- Common stylesheets -->
 	<link th:href="@{/css/common/common.css}" rel="stylesheet"/>

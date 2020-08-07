@@ -1,7 +1,74 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <!-- footerFragment 사용 -->
 <th:block th:fragment="footerFragment">
-	<footer id="footer" class="dark">
+	<footer id="footer" class="border-0 bg-white">
+		<div class="container">
+			<div class="footer-widgets-wrap pb-5 clearfix">
+				<div class="row col-mb-30">
+					<div class="col-md-8">
+						<div class="widget clearfix">
+							<img th:src="@{/images/footer/footer-logo.png}" alt="Footer Logo" class="alignleft" style="margin-top: 8px; padding-right: 18px; border-right: 1px solid #DDD;">
+							<!-- <p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards with a Retina &amp; Responsive Approach. Browse the amazing Features this template offers.</p> -->
+							<p>(642-829) 경남 창원시 성산구 동산로 65번길 24 타임빌딩 2층 (상남동  창원온천 옆)<br>대표이사 문지영 | 사업자 등록번호 134082-11806</p>
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="widget clearfix">
+							<div class="row clearfix">
+								<div class="col-12">
+									<div class="feature-box fbox-plain fbox-sm align-items-center">
+										<div class="fbox-icon">
+											<i class="icon-phone3 text-dark"></i>
+										</div>
+										<div class="fbox-content">
+											<span class="text-muted">Call Us:</span><br>
+											<h3 class="nott ls0 font-weight-semibold">(055) 287-0513</h3>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 mt-4">
+									<div class="feature-box fbox-plain fbox-sm align-items-center">
+										<div class="fbox-icon">
+											<i class="icon-envelope text-dark"></i>
+										</div>
+										<div class="fbox-content">
+											<span class="text-muted">Email Us:</span><br>
+											<h3 class="nott ls0 font-weight-semibold">master@onsemiro.org</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="copyrights" th:style="'background: url(' + @{/images/footer/footer.svg} + ') no-repeat top center; background-size: cover; padding-top: 70px;'">
+			<div class="container clearfix">
+				<div class="row justify-content-between col-mb-30">
+					<div class="col-12 col-lg-auto text-center text-lg-left">
+						Copyrights &copy; 2020 All Rights Reserved by 사단법인YSC Inc.<br>
+						<div class="copyright-links">
+							<a href="#">Terms of Use</a> / 
+							<a href="#">Privacy Policy</a>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-auto text-center text-lg-right">
+						<div class="copyrights-menu copyright-links clearfix">
+							<a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Team</a>/<a href="#">Clients</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- <footer id="footer" class="dark">
 		<div class="container">
 			<div class="footer-widgets-wrap copyrights">
 				<div class="row">
@@ -37,6 +104,6 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 </th:block>
 </html>

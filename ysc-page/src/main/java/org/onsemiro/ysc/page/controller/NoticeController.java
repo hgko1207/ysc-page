@@ -19,7 +19,7 @@ public class NoticeController {
 	 * 공지사항 화면
 	 * @param model
 	 */
-	@GetMapping("main")
-    public void main(Model model) {
+	@GetMapping("list")
+    public void list(Model model) {
     }
 }
