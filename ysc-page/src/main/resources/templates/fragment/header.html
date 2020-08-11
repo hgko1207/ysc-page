@@ -52,72 +52,11 @@
 					
 					<nav class="primary-menu with-arrows">
 						<ul class="menu-container">
-							<li id="home" class="menu-item current">
+							<li id="home" class="menu-item">
 								<a class="menu-link" th:href="@{/home}">Home</a>
 							</li>
 							<li id="about" class="menu-item">
-								<a class="menu-link" th:href="@{/about/accomplish}">궁금해요</a>
-							</li>
-							<li id="notice" class="menu-item">
-								<a class="menu-link" th:href="@{/notice/list}">알립니다</a>
-							</li>
-							<li id="board" class="menu-item">
-								<a class="menu-link" href="#">함께해요</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<!-- <div id="top-bar" class="dark" style="background-color: #a3a5a7;">
-		<div class="container">
-			<div class="row justify-content-between align-items-center">
-				<div class="col-12 col-lg-auto">
-					<p class="mb-0 py-2 text-center text-md-left"><strong>Call:</strong> 1800-547-2145 | <strong>Email:</strong> info@canvas.com</p>
-				</div>
-
-				<div class="col-12 col-lg-auto d-none d-lg-flex">
-					<div class="top-links">
-						<ul class="top-links-container">
-							<li class="top-links-item"><a href="#">About</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-		
-	<!-- <header id="header" class="header-size-md" data-sticky-shrink="false">
-		<div id="header-wrap">
-			<div class="container">
-				<div class="header-row">
-					<div id="logo">
-						<a th:href="@{/home}" class="standard-logo">
-							<img th:src="@{/images/logo.png}" alt="Canvas Logo">
-						</a>
-					</div>
-					
-					<div class="header-misc">
-						<a href="#loginModal" class="button button-border button-border-thin button-blue login-btn" data-lightbox="inline">로그인</a>
-					</div>
-					
-					<div id="primary-menu-trigger">
-						<svg class="svg-trigger" viewBox="0 0 100 100">
-							<path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
-							<path d="m 30,50 h 40"></path>
-							<path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
-						</svg>
-					</div>
-					
-					<nav class="primary-menu">
-						<ul class="menu-container">
-							<li id="home" class="menu-item">
-								<a class="menu-link" th:href="@{/home}">HOME</a>
-							</li>
-							<li id="about" class="menu-item">
-								<a class="menu-link" th:href="@{/about/accomplish}">궁금해요</a>
+								<a class="menu-link" href="#"><div>궁금해요</div></a>
 								<ul class="sub-menu-container">
 									<li class="menu-item">
 										<a class="menu-link" th:href="@{/about/accomplish}">Firmly accomplish</a>
@@ -134,10 +73,10 @@
 								</ul>
 							</li>
 							<li id="notice" class="menu-item">
-								<a class="menu-link" th:href="@{/notice/main}">알립니다</a>
+								<a class="menu-link" th:href="@{/notice/list}">알립니다</a>
 							</li>
 							<li id="board" class="menu-item">
-								<a class="menu-link" href="#">함께해요</a>
+								<a class="menu-link" href="#"><div>함께해요</div></a>
 								<ul class="sub-menu-container">
 									<li class="menu-item">
 										<a class="menu-link" th:href="@{/about/accomplish}">알립니다</a>
@@ -153,18 +92,12 @@
 									</li>
 								</ul>
 							</li>
-							<li class="menu-item">
-								<a class="menu-link" th:href="@{/login}">시작해요</a>
-								<a href="#loginModal" class="menu-link" data-lightbox="inline">
-									시작해요
-								</a>
-							</li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
-	</header> -->
+	</header>
 	
 	<!-- Login Modal -->
 	<div class="modal1 mfp-hide" id="loginModal">
@@ -197,11 +130,11 @@
 		</div>
 	</div>
 	
-	<!-- <script>
+	<script>
 		var pathName = this.location.pathname;
 		var menuName = pathName.split("/")[2];
 	    
 		$("li#" + menuName).addClass("current");
-	</script> -->
+	</script>
 </th:block>
 </html>

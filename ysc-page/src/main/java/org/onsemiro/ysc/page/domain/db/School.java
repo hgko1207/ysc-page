@@ -33,7 +33,7 @@ public class School implements Domain {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	/** 이름 */
+	/** 학교명 */
 	@Column(nullable = false, length = 20)
 	private String name;
 	
@@ -56,7 +56,8 @@ public class School implements Domain {
 	@Getter
 	public enum SchoolType {
 		초등학교("초등학교"),
-		중학교("중학교");
+		중학교("중학교"),
+		고등학교("고등학교");
 		
 		private String name;
 		
