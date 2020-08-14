@@ -16,10 +16,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BoardController {
 
 	/**
-	 * 함께해요 화면
+	 * 알립니다 화면
 	 * @param model
 	 */
-	@GetMapping("together")
-    public void together(Model model) {
+	@GetMapping("inform")
+    public void inform(Model model) {
+    }
+	
+	/**
+	 * 신청합니다 화면
+	 * @param model
+	 */
+	@GetMapping("apply")
+    public void apply(Model model) {
+    }
+	
+	/**
+	 * 궁금합니다 화면
+	 * @param model
+	 */
+	@GetMapping("wonder")
+    public void wonder(Model model) {
+    }
+	
+	/**
+	 * 자랑합니다 화면
+	 * @param model
+	 */
+	@GetMapping("boast")
+    public void boast(Model model) {
     }
 }

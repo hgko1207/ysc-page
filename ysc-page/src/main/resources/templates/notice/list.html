@@ -3,21 +3,31 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout/default_layout">
       
 <th:block layout:fragment="content">
-	<section id="page-title" class="page-title-mini page-title-nobg">
-		<div class="container clearfix">
-			<h1>공지사항</h1>
-			<span></span>
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">알립니다</li>
-			</ol>
-		</div>
-	</section>
-		
-	<section id="content">
-		<div class="content-wrap">
+	<div class="section my-0 page-header">
+		<div class="container">
+			<div class="heading-block border-bottom-0 center">
+				<!-- <div class="badge badge-pill badge-default">Testimonials</div> -->
+				<h3 class="nott ls0" style="line-height: 1.2; letter-spacing: -1px;">공지사항</h3>
+				<span style="font-size: 12px; letter-spacing: 0; max-width: 600px; font-weight: 400; color: #888;">
+				 	Home ㆍ 알립니다
+				</span>
+			</div>
 			
+			<div class="clearfix px-md-5">
+				<table class="table" id="noticeTable">
+				  	<thead class="text-center">
+						<tr>
+					  		<th>번호</th>
+					  		<th>글제목</th>
+					  		<th>작성자</th>
+					  		<th>작성일</th>
+					  		<th>조회</th>
+						</tr>
+				  	</thead>
+				  	<tbody  class="text-center"></tbody>
+				</table>
+			</div>
 		</div>
-	</section>
+	</div>
 </th:block>
 </html>

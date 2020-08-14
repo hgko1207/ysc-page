@@ -33,9 +33,8 @@
 			<div class="container">
 				<div class="header-row">
 					<div id="logo">
-						<a th:href="@{/home}" class="standard-logo">
-							<img th:src="@{/images/logo.png}" alt="Canvas Logo">
-						</a>
+						<a th:href="@{/home}" class="standard-logo"><img th:src="@{/images/logo.png}" alt="Logo"></a>
+						<a th:href="@{/home}" class="retina-logo"><img th:src="@{/images/logo.png}" alt="Logo"></a>
 					</div>
 					
 					<div class="header-misc">
@@ -79,16 +78,16 @@
 								<a class="menu-link" href="#"><div>함께해요</div></a>
 								<ul class="sub-menu-container">
 									<li class="menu-item">
-										<a class="menu-link" th:href="@{/about/accomplish}">알립니다</a>
+										<a class="menu-link" th:href="@{/board/inform}">알립니다</a>
 									</li>
 									<li class="menu-item">
-										<a class="menu-link" th:href="@{/about/already}">신청합니다</a>
+										<a class="menu-link" th:href="@{/board/apply}">신청합니다</a>
 									</li>
 									<li class="menu-item">
-										<a class="menu-link" th:href="@{/about/family}">궁금합니다</a>
+										<a class="menu-link" th:href="@{/board/wonder}">궁금합니다</a>
 									</li>
 									<li class="menu-item">
-										<a class="menu-link" th:href="@{/about/location}">자랑합니다</a>
+										<a class="menu-link" th:href="@{/board/boast}">자랑합니다</a>
 									</li>
 								</ul>
 							</li>

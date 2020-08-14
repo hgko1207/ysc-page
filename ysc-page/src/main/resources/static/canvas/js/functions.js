@@ -2242,12 +2242,7 @@ var SEMICOLON = SEMICOLON || {};
 	
 	document.addEventListener('DOMContentLoaded', function() {
 		SEMICOLON.documentOnReady.init();
-//		SEMICOLON.documentOnLoad.init();
-		
-		console.log(11);
-		
-//		$(document).ready(SEMICOLON.documentOnReady.init);
-//		$window.on('load', SEMICOLON.documentOnLoad.init);
+		SEMICOLON.documentOnLoad.init();
 		
 		$window.on('resize', function() {
 			let thisWindow = $(this);
@@ -2261,9 +2256,7 @@ var SEMICOLON = SEMICOLON || {};
 	});
 	
 //	$(document).ready( SEMICOLON.documentOnReady.init );
-//
 //	$window.on( 'load', SEMICOLON.documentOnLoad.init );
-//
 //	$window.on( 'resize', function() {
 //		let thisWindow = $(this);
 //		clearTimeout(resizeTimer);

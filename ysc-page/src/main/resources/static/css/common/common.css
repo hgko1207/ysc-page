@@ -11,6 +11,28 @@
 }
 
 /*----------------------------------------------------------------
+	Page Header
+-----------------------------------------------------------------*/
+.page-header {
+	background: url(../../images/sections/3.jpg) no-repeat top center;
+	background-size: cover;
+	padding: 40px 0 0;
+}
+
+.page-header-title {
+	line-height: 1.2!important;
+	letter-spacing: -1px!important;
+}
+
+.page-header-sub-title {
+	font-size: 12px!important;
+	letter-spacing: 0;
+	max-width: 600px!important;
+	font-weight: 400!important;
+	color: #888!important;
+}
+
+/*----------------------------------------------------------------
 	Content
 -----------------------------------------------------------------*/
 /* @media ( min-width : 768px) {
@@ -41,21 +63,19 @@
 /* .copyrights, .copyrights a {
 	font-size: 0.875rem;
 	color: rgba(255, 255, 255, 0.4) !important;
-}
-
+} */
 @media ( max-width : 768px) {
 	.copyrights, .copyrights a {
 		font-size: 10px!important;
 	}
-	.footer-tel a {
-		font-size: 12px!important;
+	.footer-widgets-wrap, .footer-widgets-wrap h3 {
+		font-size: 10px!important;
 	}
+	/* .footer-widgets-wrap i {
+		font-size: 1rem!important;
+	} */
 }
 
 #footer .footer-widgets-wrap {
 	padding: 20px 0;
 }
-
-.footer-tel a {
-	font-size: 20px;
-} */
