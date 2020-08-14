@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Transactional
 @Service
 public class NoticeServiceImpl implements NoticeService {
 	
@@ -22,7 +21,6 @@ public class NoticeServiceImpl implements NoticeService {
 		return noticeRepository.findById(id).get();
 	}
 
-	@Transactional(readOnly = true)
 	@Override
 	public List<Notice> getList() {
 		return noticeRepository.findAll();
@@ -56,7 +54,7 @@ public class NoticeServiceImpl implements NoticeService {
 		return !noticeRepository.existsById(domain.getId());
 	}
 
-	@Transactional(readOnly = true)
+	@Transactional(readOnly=true)
 	@Override
 	public List<Notice> getList(SearchParam param) {
 		return noticeRepository.findAll();

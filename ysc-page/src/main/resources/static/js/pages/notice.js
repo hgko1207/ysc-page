@@ -15,10 +15,26 @@ const NoticeManager = function() {
 			    	data: "title",
 			    	render: function(data, type, row, meta) {
 			    		return `<a href="${contextPath}/notice/detail/${row.id}" ` +
-			    		 `class="text-dark text-hover-success font-weight-bolder">${row.title}</a>`;
+			    		 `class="text-dark">${row.title}</a>`;
 			    	}
 			    },
-				{ data: "userName" },
+			    { 
+			    	width: "1%",
+			    	data: null,
+			    	render: function(data, type, row, meta) {
+			    		if (row.files.length > 0) {
+			    			return `<img src="${contextPath}/images/small/file.gif"/>`;
+			    		} else {
+			    			return "";
+			    		}
+			    	}
+		    	},
+				{ 
+		    		data: "userName",
+		    		render: function(data, type, row, meta) {
+			    		return `<img src="${contextPath}/images/small/user.gif" class="mr-2"/>${row.userName}`;
+			    	}
+		    	},
 				{
 					data: "createDate",
 			    	render: function(data, type, row, meta) {

@@ -79,3 +79,18 @@
 #footer .footer-widgets-wrap {
 	padding: 20px 0;
 }
+
+/*----------------------------------------------------------------
+	Table
+-----------------------------------------------------------------*/
+.table td {
+	/* border-top: 1px dotted #dee2e6; */
+}
+
+.table, .dataTables_info, .paginate_button {
+	font-size: 0.875rem;
+}
+
+.datatable-footer {
+    padding: 1.25rem 1.25rem 0 1.25rem;
+}

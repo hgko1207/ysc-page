@@ -1,7 +1,7 @@
 $.extend( $.fn.dataTable.defaults, {
 	autoWidth: false,
-    //dom: '<"datatable-header"fl><"datatable-scroll-wrap"t><"datatable-footer"ip>',
-    dom: `<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
+    dom: '<"datatable-header"fl><"datatable-scroll-wrap"t><"datatable-footer"ip>',
+    //dom: `<'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
     language: {
 		emptyTable: '데이터가 없습니다.',
 		infoEmpty: "",
@@ -55,8 +55,6 @@ const Datatables = {
 			},
 			columns: tableOption ? tableOption.columns : null,
 			columnDefs: [
-//		    	{ orderable: true, className: 'reorder', targets: 0 },
-//		    	{ orderable: true, className: 'reorder', targets: num },
 		    	{ orderable: false, targets: '_all' }
 		    ],
 			order: [[0, 'desc']],
@@ -74,7 +72,7 @@ const Datatables = {
 			contentType: "application/json",
 			success: function(data) {
 				table.rows.add(data).draw();
-				table.columns.adjust().responsive.recalc();
+				//table.columns.adjust().responsive.recalc();
 		   	}
 		});
 	},
