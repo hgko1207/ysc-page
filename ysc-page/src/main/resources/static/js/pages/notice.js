@@ -18,11 +18,11 @@ const NoticeManager = function() {
 			    		 `class="text-dark text-hover-success font-weight-bolder">${row.title}</a>`;
 			    	}
 			    },
-				{ data: "userId" },
+				{ data: "userName" },
 				{
 					data: "createDate",
 			    	render: function(data, type, row, meta) {
-			    		return moment(new Date(row.createDate)).format("YYYY-MM-DD HH:mm:ss");
+			    		return moment(new Date(row.createDate)).format("YYYY-MM-DD");
 			    	}
 			    },
 			    { 
@@ -32,7 +32,7 @@ const NoticeManager = function() {
 			]
 		},
 		init: function() {
-			this.table = Datatables.order(this.ele, this.option, 3);
+			this.table = Datatables.notice(this.ele, this.option, 3);
 			this.search();
 		},
 		search: function() {
@@ -42,7 +42,7 @@ const NoticeManager = function() {
 	}
 	
 	return {
-		list: function() {
+		init: function() {
 			dataTable.init();
 		}
 	}
